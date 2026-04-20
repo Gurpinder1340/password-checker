@@ -10,6 +10,14 @@ public class PasswordCheckerTest {
     assertEquals("short", checker.describePasswordLength("123"));
   }
 
+  // test for describePasswordLength()'s medium password
+  @Test
+  void testMediumPassword() {
+    PasswordChecker checker = new PasswordChecker(5, 10);
+    String result = checker.describePasswordLength("abcdef"); 
+    assertEquals("medium", result);
+  }
+
+
 }
 
-//how're you doing?
